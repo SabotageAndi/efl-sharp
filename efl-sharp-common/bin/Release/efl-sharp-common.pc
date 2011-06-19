@@ -1,6 +1,0 @@
-Name: efl-sharp-common
-Description: efl-sharp-common
-Version: 0.1
-
-Requires: 
-Libs: -r:/usr/lib/csharp/efl-sharp-common.dll
