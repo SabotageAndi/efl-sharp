@@ -1,0 +1,6 @@
+Name: evas-sharp
+Description: evas-sharp
+Version: 0.1
+
+Requires: 
+Libs: -r:@expanded_libdir@/@PACKAGE@/libevas-sharp.dll

@@ -1,0 +1,6 @@
+Name: edje-sharp
+Description: edje-sharp
+Version: 0.1
+
+Requires: 
+Libs: -r:@expanded_libdir@/@PACKAGE@/libedje-sharp.dll

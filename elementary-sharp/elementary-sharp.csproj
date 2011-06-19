@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4575945B-38A9-4DC5-954E-888C230FE7D3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Efl.Elementary</RootNamespace>
+    <AssemblyName>libelementary-sharp</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\efl-sharp.key</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="src\AssemblyInfo.cs" />
+    <Compile Include="src\AnchorView.cs" />
+    <Compile Include="src\Background.cs" />
+    <Compile Include="src\Box.cs" />
+    <Compile Include="src\Button.cs" />
+    <Compile Include="src\Check.cs" />
+    <Compile Include="src\Constants.cs" />
+    <Compile Include="src\Elementary.cs" />
+    <Compile Include="src\Entry.cs" />
+    <Compile Include="src\Frame.cs" />
+    <Compile Include="src\Hoversel.cs" />
+    <Compile Include="src\Image.cs" />
+    <Compile Include="src\Label.cs" />
+    <Compile Include="src\List.cs" />
+    <Compile Include="src\ListItem.cs" />
+    <Compile Include="src\ScrolledEntry.cs" />
+    <Compile Include="src\WidgetItem.cs" />
+    <Compile Include="src\Window.cs" />
+    <Compile Include="src\Impl\AnchorViewImpl.cs" />
+    <Compile Include="src\Impl\BackgroundImpl.cs" />
+    <Compile Include="src\Impl\BoxImpl.cs" />
+    <Compile Include="src\Impl\ButtonImpl.cs" />
+    <Compile Include="src\Impl\CheckImpl.cs" />
+    <Compile Include="src\Impl\ElementaryImpl.cs" />
+    <Compile Include="src\Impl\EntryImpl.cs" />
+    <Compile Include="src\Impl\FrameImpl.cs" />
+    <Compile Include="src\Impl\HoverselImpl.cs" />
+    <Compile Include="src\Impl\ImageImpl.cs" />
+    <Compile Include="src\Impl\LabelImpl.cs" />
+    <Compile Include="src\Impl\ListImpl.cs" />
+    <Compile Include="src\Impl\ScrolledEntryImpl.cs" />
+    <Compile Include="src\Impl\WindowImpl.cs" />
+    <Compile Include="src\Library.cs" />
+    <Compile Include="src\Impl\ToolbarImpl.cs" />
+    <Compile Include="src\Impl\ToolbarItemImpl.cs" />
+    <Compile Include="src\ToolbarItem.cs" />
+    <Compile Include="src\Toolbar.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="src\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\Status.txt" />
+  </ItemGroup>
+  <ProjectExtensions>
+    <MonoDevelop>
+      <Properties>
+        <MonoDevelop.Autotools.MakefileInfo IntegrationEnabled="true" RelativeMakefileName="Makefile.am" BuildTargetName="" SyncReferences="true" IsAutotoolsProject="true" RelativeConfigureInPath="..">
+          <BuildFilesVar Sync="true" Name="FILES" />
+          <DeployFilesVar />
+          <ResourcesVar Sync="true" Name="RESOURCES" />
+          <OthersVar />
+          <GacRefVar Sync="true" Name="REFERENCES" />
+          <AsmRefVar Sync="true" Name="REFERENCES" />
+          <ProjectRefVar Sync="true" Name="REFERENCES" />
+        </MonoDevelop.Autotools.MakefileInfo>
+      </Properties>
+    </MonoDevelop>
+  </ProjectExtensions>
+  <ItemGroup>
+    <ProjectReference Include="..\evas-sharp\evas-sharp.csproj">
+      <Project>{6B76255B-9815-4456-873E-B942BB3CB98C}</Project>
+      <Name>evas-sharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\efl-sharp-common\efl-sharp-common.csproj">
+      <Project>{6CE939A7-3062-4E92-8930-A362A3D22175}</Project>
+      <Name>efl-sharp-common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\eina-sharp\eina-sharp.csproj">
+      <Project>{52CA6F81-2FB2-4C97-A090-1C3569729CC1}</Project>
+      <Name>eina-sharp</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

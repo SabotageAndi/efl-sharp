@@ -1,0 +1,78 @@
+Anchorblock
+Anchorview
+Ctxpopup
+Fileselector
+File Selector Button
+File Selector Entry
+Hoversel
+Scrolled_Entry
+Bg
+Box
+Bubble
+Button
+Calendar
+Check
+	all done, except elm_check_state_pointer_set - no BoolPointer in C#
+Clock
+Conformant
+Diskselector
+Entry
+Flip
+Frame
+Gengrid
+Genlist
+Hover
+Icon
+Image
+	done
+Index
+Label
+Layout
+List
+Getting Started
+General
+Selective Widget Scaling
+Styles
+Elementary Config
+Elementary Profile
+Elementary Engine
+Elementary Fonts
+Fingers
+Caches
+Focus
+Scrolling
+Scrollhints
+Widget Tree Navigation.
+Debug
+Map
+Mapbuf
+Menu
+notify
+Pager
+Panel
+panes
+Photo
+Photocam
+Progressbar
+Radio
+Scroller
+Separator
+Slider
+slideshow
+Spinner
+Table
+Theme
+Thumb
+Toggle
+Toolbar
+Transit
+Widget
+Win
+Inwin
+Cursors
+Tooltips
+Actionslider
+Animator
+Colorselector
+Flipselector
+
