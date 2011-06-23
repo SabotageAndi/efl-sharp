@@ -51,6 +51,18 @@ namespace Efl.Elementary
 		public ToolbarItem()
 		{
 		}
+		
+		public string Icon
+		{
+			get { return elm_toolbar_item_icon_get(this.Raw); }
+			set { elm_toolbar_item_icon_set(this.Raw, value); }
+		}
+			
+		public string Label
+		{
+			get { return elm_toolbar_item_label_get(this.Raw); }
+			set { elm_toolbar_item_label_set(this.Raw, value); }
+		}
 	}
 }
 

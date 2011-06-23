@@ -43,10 +43,10 @@ namespace Efl.Elementary.Impl
 		protected static extern ToolbarItemPtr elm_toolbar_item_prepend(EvasObjectPtr obj, string icon, string label, EvasSmartCallback func, IntPtr data);
 
 		[DllImport(Library.Name)]
-		protected static extern ToolbarItemPtr elm_toolbar_item_insert_before(EvasObjectPtr obj, EvasObjectPtr before,  string icon, string label, EvasSmartCallback func, IntPtr data);
+		protected static extern ToolbarItemPtr elm_toolbar_item_insert_before(EvasObjectPtr obj, ToolbarItemPtr before,  string icon, string label, EvasSmartCallback func, IntPtr data);
 		
 		[DllImport(Library.Name)]
-		protected static extern ToolbarItemPtr elm_toolbar_item_insert_after(EvasObjectPtr obj, EvasObjectPtr after,  string icon, string label, EvasSmartCallback func, IntPtr data);
+		protected static extern ToolbarItemPtr elm_toolbar_item_insert_after(EvasObjectPtr obj, ToolbarItemPtr after,  string icon, string label, EvasSmartCallback func, IntPtr data);
 		
 		
 		

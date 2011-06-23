@@ -1,22 +1,21 @@
 ﻿<Properties>
   <AuthorInfo Name="Andreas Willich" Email="sabotageandi@gmail.com" Copyright="Andreas Willich" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="elementary-sharp/src/Impl/ToolbarItemImpl.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="elementary-sharp/src/WidgetItem.cs">
     <Files>
       <File FileName="elementary-sharp/src/Toolbar.cs" Line="56" Column="41" />
-      <File FileName="elementary-sharp/src/ToolbarItem.cs" Line="32" Column="25" />
-      <File FileName="elementary-sharp/src/Impl/ToolbarImpl.cs" Line="52" Column="3" />
-      <File FileName="elementary-sharp/src/Impl/ToolbarItemImpl.cs" Line="66" Column="96" />
-      <File FileName="elementary-sharp/src/Button.cs" Line="48" Column="19" />
+      <File FileName="elementary-sharp/src/Impl/ToolbarImpl.cs" Line="1" Column="1" />
+      <File FileName="elementary-sharp/src/Impl/ToolbarItemImpl.cs" Line="1" Column="1" />
+      <File FileName="elementary-sharp/src/ToolbarItem.cs" Line="1" Column="1" />
+      <File FileName="elementary-sharp/src/WidgetItem.cs" Line="39" Column="34" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
           <Node name="elementary-sharp" expanded="True">
             <Node name="src" expanded="True">
-              <Node name="Impl" expanded="True">
-                <Node name="ToolbarItemImpl.cs" selected="True" />
-              </Node>
+              <Node name="Impl" expanded="True" />
+              <Node name="WidgetItem.cs" selected="True" />
             </Node>
           </Node>
           <Node name="evas-sharp" expanded="True">

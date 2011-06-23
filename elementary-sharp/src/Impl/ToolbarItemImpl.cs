@@ -21,49 +21,33 @@
 //  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
 using System;
 using System.Runtime.InteropServices;
+using Efl.Elementary;
 
 namespace Efl.Elementary.Impl
 {
 	public class ToolbarItemImpl : WidgetItem
-	{
-//   EINA_INLIST;
-//   const char *label;
-//   const char *icon_str;
-//   Evas_Object *icon;
-//   Evas_Object *o_menu;
-//   Evas_Smart_Cb func;
-//   struct {
-//      int priority;
-//      Eina_Bool visible : 1;
-//   } prio;
-//   Eina_Bool selected : 1;
-//   Eina_Bool disabled : 1;
-//   Eina_Bool separator : 1;
-//   Eina_Bool menu : 1;
-//   Eina_List *states;
-//   Eina_List *current_state;
+	{		
+		[DllImport(Library.Name)]
+		protected static extern Evas.EvasObjectPtr elm_toolbar_item_toolbar_get(ToolbarItemPtr item);
 		
 		[DllImport(Library.Name)]
-		protected static extern Evas.EvasObjectPtr elm_toolbar_item_toolbar_get(ToolBarItemPtr item);
+		protected static extern string elm_toolbar_item_icon_get(ToolbarItemPtr item);
 		
 		[DllImport(Library.Name)]
-		protected static extern string elm_toolbar_item_icon_get(ToolBarItemPtr item);
-		
-		[DllImport(Library.Name)]
-		protected static extern void elm_toolbar_item_icon_set(ToolBarItemPtr item, string icon);
+		protected static extern void elm_toolbar_item_icon_set(ToolbarItemPtr item, string icon);
 		
 		
 		[DllImport(Library.Name)]
-		protected static extern string elm_toolbar_item_label_get(ToolBarItemPtr item);
+		protected static extern string elm_toolbar_item_label_get(ToolbarItemPtr item);
 		
 		[DllImport(Library.Name)]
-		protected static extern string elm_toolbar_item_label_set(ToolBarItemPtr item, string label);
+		protected static extern string elm_toolbar_item_label_set(ToolbarItemPtr item, string label);
 		
 		[DllImport(Library.Name)]
-		protected static extern bool elm_toolbar_item_selected_get(ToolBarItemPtr item);
+		protected static extern bool elm_toolbar_item_selected_get(ToolbarItemPtr item);
 		
 		[DllImport(Library.Name)]
-		protected static extern void elm_toolbar_item_selected_set(ToolBarItemPtr item, bool selected);
+		protected static extern void elm_toolbar_item_selected_set(ToolbarItemPtr item, bool selected);
 	}
 }
 
