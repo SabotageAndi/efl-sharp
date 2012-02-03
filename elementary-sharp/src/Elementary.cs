@@ -27,22 +27,22 @@ namespace Efl.Elementary
 {
 	public class Elementary : Impl.ElementaryImpl
 	{
-		public void Init()
+		public static void Init()
 		{
 			elm_init(0, null);
 		}
 		
-		public void Run()
+		public static void Run()
 		{
 			elm_run();
 		}
 		
-		public void Exit()
+		public static void Exit()
 		{
 			elm_exit();
 		}
 		
-		public void Shutdown()
+		public static void Shutdown()
 		{
 			elm_shutdown();
 		}

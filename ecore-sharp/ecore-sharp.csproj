@@ -9,7 +9,6 @@
     <OutputType>Library</OutputType>
     <RootNamespace>Efl.Ecore</RootNamespace>
     <AssemblyName>libecore-sharp</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>..\efl-sharp.key</AssemblyOriginatorKeyFile>
   </PropertyGroup>

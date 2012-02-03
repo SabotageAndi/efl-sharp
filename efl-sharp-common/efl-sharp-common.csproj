@@ -9,7 +9,6 @@
     <OutputType>Library</OutputType>
     <RootNamespace>eflsharpcommon</RootNamespace>
     <AssemblyName>libefl-sharp-common</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>..\efl-sharp.key</AssemblyOriginatorKeyFile>
   </PropertyGroup>

@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "edje-sharp", "edje-sharp\ed
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "elementary-sharp", "elementary-sharp\elementary-sharp.csproj", "{4575945B-38A9-4DC5-954E-888C230FE7D3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "efl-sharp-test", "efl-sharp-test\efl-sharp-test.csproj", "{7758C18E-A99B-4E57-AE58-1ED2660177CF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,10 @@ Global
 		{6CE939A7-3062-4E92-8930-A362A3D22175}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6CE939A7-3062-4E92-8930-A362A3D22175}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6CE939A7-3062-4E92-8930-A362A3D22175}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7758C18E-A99B-4E57-AE58-1ED2660177CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7758C18E-A99B-4E57-AE58-1ED2660177CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7758C18E-A99B-4E57-AE58-1ED2660177CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7758C18E-A99B-4E57-AE58-1ED2660177CF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AD091952-E800-42FD-87F8-56F3773C67FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AD091952-E800-42FD-87F8-56F3773C67FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD091952-E800-42FD-87F8-56F3773C67FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -51,10 +57,11 @@ Global
 		{FC72AE95-1AF5-4356-864B-52DDE500C5BD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = efl-sharp-common\efl-sharp-common.csproj
+		StartupItem = efl-sharp-test\efl-sharp-test.csproj
 		Policies = $0
 		$0.StandardHeader = $1
-		$1.inheritsSet = LGPLv2License
+		$1.Text = @\n ${FileName}\n \n Author:\n      ${AuthorName} <${AuthorEmail}>\n\n Copyright (c) ${Year} ${CopyrightHolder}\n\n This library is free software; you can redistribute it and/or modify\n it under the terms of the GNU Lesser General Public License as\n published by the Free Software Foundation; either version 2.1 of the\n License, or (at your option) any later version.\n\n This library is distributed in the hope that it will be useful, but\n WITHOUT ANY WARRANTY; without even the implied warranty of\n MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU\n Lesser General Public License for more details.\n\n You should have received a copy of the GNU Lesser General Public\n License along with this library; if not, write to the Free Software\n Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+		$1.IncludeInNewFiles = True
 		$0.VersionControlPolicy = $2
 		$2.inheritsSet = Mono
 		$0.ChangeLogPolicy = $3

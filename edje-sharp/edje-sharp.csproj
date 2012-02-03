@@ -9,7 +9,6 @@
     <OutputType>Library</OutputType>
     <RootNamespace>Efl.Edje</RootNamespace>
     <AssemblyName>libedje-sharp</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>..\efl-sharp.key</AssemblyOriginatorKeyFile>
   </PropertyGroup>

@@ -28,7 +28,10 @@ namespace Efl.Elementary.Impl
 	{
 		[DllImport(Library.Name)]
 		protected static extern Evas.EvasObjectPtr elm_win_add (ref Efl.Evas.EvasObject parent, string name, int type);
-
+		
+		[DllImport(Library.Name)]
+		protected static extern Evas.EvasObjectPtr elm_win_util_standard_add(string name, string title);
+		
 		[DllImport(Library.Name)]
 		protected static extern void elm_win_activate (Evas.EvasObjectPtr obj);
 		

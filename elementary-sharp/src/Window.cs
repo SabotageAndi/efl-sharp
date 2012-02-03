@@ -38,6 +38,13 @@ namespace Efl.Elementary
 			
 			this.Show ();
 		}
+		
+		public Window(string name, string title)
+		{
+			Raw = elm_win_util_standard_add(name, title);
+			
+			this.Show();
+		}
 
 		public void Activate ()
 		{
