@@ -25,6 +25,6 @@ namespace Efl.Evas
 {
 	
 	//	typedef void      (*Evas_Smart_Cb) (void *data, Evas_Object *obj, void *event_info);
-	public delegate void EvasSmartCallback(EvasObjectPtr data, EvasObjectPtr obj, EvasObjectPtr event_info);
+	public delegate void EvasSmartCallback(IntPtr data, IntPtr obj, IntPtr event_info);
 }
 

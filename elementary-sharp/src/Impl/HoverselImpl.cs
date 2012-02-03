@@ -31,22 +31,22 @@ namespace Efl.Elementary.Impl
 		}
 
 		[DllImport(Library.Name)]
-		protected static extern Evas.EvasObjectPtr elm_hoversel_add(Evas.EvasObjectPtr parent);
+		protected static extern IntPtr elm_hoversel_add(IntPtr parent);
 
 		[DllImport(Library.Name)]
-		protected static extern void elm_hoversel_horizontal_set(Evas.EvasObjectPtr obj, bool horizontal);
+		protected static extern void elm_hoversel_horizontal_set(IntPtr obj, bool horizontal);
 
 		[DllImport(Library.Name)]
-		protected static extern bool elm_hoversel_horizontal_get(Evas.EvasObjectPtr obj);
+		protected static extern bool elm_hoversel_horizontal_get(IntPtr obj);
 
 		[DllImport(Library.Name)]
-		protected static extern void elm_hoversel_hover_begin(Evas.EvasObjectPtr obj);
+		protected static extern void elm_hoversel_hover_begin(IntPtr obj);
 
 		[DllImport(Library.Name)]
-		protected static extern void elm_hoversel_hover_end(Evas.EvasObjectPtr obj);
+		protected static extern void elm_hoversel_hover_end(IntPtr obj);
 
 		[DllImport(Library.Name)]
-		protected static extern bool elm_hoversel_expanded_get(Evas.EvasObjectPtr obj);
+		protected static extern bool elm_hoversel_expanded_get(IntPtr obj);
 		
 	}
 }

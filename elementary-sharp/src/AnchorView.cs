@@ -33,32 +33,32 @@ namespace Efl.Elementary
 
 		public AnchorView(EvasObject parent)
 		{
-			Raw = elm_anchorview_add(parent.Raw);
+			Raw.Pointer = elm_anchorview_add(parent.Raw.Pointer);
 		}
 
 		public string Text
 		{
 			get {
-				var ptr = elm_anchorview_text_get(this.Raw);
+				var ptr = elm_anchorview_text_get(this.Raw.Pointer);
 				return Marshal.PtrToStringUni(ptr);
 			}
-			set { elm_anchorview_text_set(this.Raw, value); }
+			set { elm_anchorview_text_set(this.Raw.Pointer, value); }
 		}
 
 		public string Style
 		{
 			get { 
-				var ptr = elm_anchorview_hover_style_get(this.Raw);
+				var ptr = elm_anchorview_hover_style_get(this.Raw.Pointer);
 				return Marshal.PtrToStringUni(ptr);
 			}
 			set {
-				elm_anchorview_hover_style_set(this.Raw, value);
+				elm_anchorview_hover_style_set(this.Raw.Pointer, value);
 			}
 		}
 		
 		public void EndHover()
 		{
-			elm_anchorview_hover_end(this.Raw);
+			elm_anchorview_hover_end(this.Raw.Pointer);
 		}
 	}
 }

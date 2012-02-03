@@ -32,7 +32,7 @@ namespace Efl.Elementary
 		
 		public Button (Evas.EvasObject parent)
 		{
-			Raw = elm_button_add (parent.Raw);
+			Raw.Pointer = elm_button_add (parent.Raw.Pointer);
 		}
 
 		public Button (Evas.EvasObject parent, string label) : this(parent)
@@ -41,14 +41,14 @@ namespace Efl.Elementary
 		}
 
 		public string Text {
-			set { elm_button_label_set (Raw, value); }
+			set { elm_button_label_set (Raw.Pointer, value); }
 		}
 		
 		
 		public event EventHandler ClickedEvent
 		{
 			add{
-				this.SmartCallbackAdd(Efl.Common.EventNames.Clicked, value, new Evas.EvasObjectPtr());
+				this.SmartCallbackAdd(Efl.Common.EventNames.Clicked, value, new IntPtr());
 			}
 			remove{
 				this.SmartCallbackRemove(Efl.Common.EventNames.Clicked, value);

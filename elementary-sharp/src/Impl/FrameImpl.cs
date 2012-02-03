@@ -31,16 +31,16 @@ namespace Efl.Elementary.Impl
 		}
 
 		[DllImport(Library.Name)]
-		protected static extern Evas.EvasObjectPtr elm_frame_add(Evas.EvasObjectPtr parent);
+		protected static extern IntPtr elm_frame_add(IntPtr parent);
 
 		[DllImport(Library.Name)]
-		protected static extern void elm_object_style_set(Evas.EvasObjectPtr obj, string style);
+		protected static extern void elm_object_style_set(IntPtr obj, string style);
 
 		[DllImport(Library.Name)]
-		protected static extern void elm_frame_content_set(Evas.EvasObjectPtr obj, Evas.EvasObjectPtr content);
+		protected static extern void elm_frame_content_set(IntPtr obj, IntPtr content);
 
 		[DllImport(Library.Name)]
-		protected static extern Evas.EvasObjectPtr elm_frame_content_get(Evas.EvasObjectPtr obj);
+		protected static extern IntPtr elm_frame_content_get(IntPtr obj);
 		
 		
 	}

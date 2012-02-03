@@ -27,13 +27,13 @@ namespace Efl.Edje
 	public class Edje_EvasImpl
 	{
 		[DllImport(Edje.Name)]
-		protected static extern bool edje_object_file_set (Evas.EvasObjectPtr obj, string file, string @group);
+		protected static extern bool edje_object_file_set (IntPtr obj, string file, string @group);
 		
 		[DllImport(Edje.Name)]
-		protected static extern bool edje_object_part_text_set(Evas.EvasObjectPtr obj, string part, string text);
+		protected static extern bool edje_object_part_text_set(IntPtr obj, string part, string text);
 		
 		[DllImport(Edje.Name)]
-		protected static extern Evas.EvasObjectPtr edje_object_add(Evas.EvasPtr evasPtr);
+		protected static extern IntPtr edje_object_add(Evas.EvasPtr evasPtr);
 	}
 }
 

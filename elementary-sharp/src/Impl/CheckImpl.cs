@@ -30,24 +30,24 @@ namespace Efl.Elementary.Impl
 		}
 
 		[DllImport(Library.Name)]
-		protected static extern Evas.EvasObjectPtr elm_check_add(Evas.EvasObjectPtr parent);
+		protected static extern IntPtr elm_check_add(IntPtr parent);
 
 		[DllImport(Library.Name)]
-		protected static extern void elm_check_label_set(Evas.EvasObjectPtr obj, string label);
+		protected static extern void elm_check_label_set(IntPtr obj, string label);
 		[DllImport(Library.Name)]
-		protected static extern string elm_check_label_get(Evas.EvasObjectPtr obj);
+		protected static extern string elm_check_label_get(IntPtr obj);
 
 		[DllImport(Library.Name)]
-		protected static extern void elm_check_state_set(Evas.EvasObjectPtr obj, bool state);
+		protected static extern void elm_check_state_set(IntPtr obj, bool state);
 		[DllImport(Library.Name)]
-		protected static extern bool elm_check_state_get(Evas.EvasObjectPtr obj);
+		protected static extern bool elm_check_state_get(IntPtr obj);
 
 		[DllImport(Library.Name)]
-		protected static extern void elm_check_icon_set(Evas.EvasObjectPtr obj, Evas.EvasObjectPtr icon);
+		protected static extern void elm_check_icon_set(IntPtr obj, IntPtr icon);
 		[DllImport(Library.Name)]
-		protected static extern Evas.EvasObjectPtr elm_check_icon_get(Evas.EvasObjectPtr obj);
+		protected static extern IntPtr elm_check_icon_get(IntPtr obj);
 		[DllImport(Library.Name)]
-		protected static extern Evas.EvasObjectPtr elm_check_icon_unset(Evas.EvasObjectPtr obj);
+		protected static extern IntPtr elm_check_icon_unset(IntPtr obj);
 		
 		
 	}

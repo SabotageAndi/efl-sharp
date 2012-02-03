@@ -27,10 +27,10 @@ namespace Efl.Elementary.Impl
 	public class LabelImpl : Evas.EvasObject
 	{
 		[DllImport(Library.Name)]
-		protected static extern Evas.EvasObjectPtr elm_label_add (Evas.EvasObjectPtr parent);
+		protected static extern IntPtr elm_label_add (IntPtr parent);
 
 		[DllImport(Library.Name)]
-		protected static extern void elm_label_label_set (Evas.EvasObjectPtr obj, string text);
+		protected static extern void elm_label_label_set (IntPtr obj, string text);
 		
 	}
 }

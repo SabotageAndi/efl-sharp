@@ -31,38 +31,41 @@ namespace Efl.Elementary
 		{
 			
 		}
+		
+		
 
-		public Window (Efl.Evas.EvasObject parent, string title, Elm_Win_Type type)
+		public Window (Efl.Evas.EvasObject parent, string name, Elm_Win_Type type)
 		{
-			Raw = elm_win_add (ref parent, title, (int)type);
-			
+			Raw.Pointer = elm_win_add (parent == null ? IntPtr.Zero : parent.Raw.Pointer, name, (int)type);
+				
 			this.Show ();
 		}
 		
 		public Window(string name, string title)
 		{
-			Raw = elm_win_util_standard_add(name, title);
+			
+			Raw.Pointer = elm_win_util_standard_add(name, title);
 			
 			this.Show();
 		}
 
 		public void Activate ()
 		{
-			elm_win_activate (this.Raw);
+			elm_win_activate (this.Raw.Pointer);
 		}
 
 		public string Title {
-			set { elm_win_title_set (this.Raw, value); }
+			set { elm_win_title_set (this.Raw.Pointer, value); }
 		}
 
 		public event EventHandler DeleteRequestEvent {
-			add { this.SmartCallbackAdd ("delete-request", value, new Evas.EvasObjectPtr ()); }
-			remove { this.SmartCallbackRemove ("delete-request", value); }
+			add { this.SmartCallbackAdd ("delete,request", value, new IntPtr ()); }
+			remove { this.SmartCallbackRemove ("delete,request", value); }
 		}
 
 		public void ResizeObjectAdd (Evas.EvasObject subobj)
 		{
-			elm_win_resize_object_add (this.Raw, subobj.Raw);
+			elm_win_resize_object_add (this.Raw.Pointer, subobj.Raw.Pointer);
 		}
 	}
 }

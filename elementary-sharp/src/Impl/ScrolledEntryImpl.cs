@@ -27,30 +27,30 @@ namespace Efl.Elementary.Impl
 	public class ScrolledEntryImpl : Evas.EvasObject
 	{
 		[DllImport(Library.Name)]
-		protected static extern Evas.EvasObjectPtr elm_scrolled_entry_add (Evas.EvasObjectPtr parent);
+		protected static extern IntPtr elm_scrolled_entry_add (IntPtr parent);
 
 		[DllImport(Library.Name)]
-		protected static extern void elm_scrolled_entry_single_line_set (Evas.EvasObjectPtr obj, bool single_line);
+		protected static extern void elm_scrolled_entry_single_line_set (IntPtr obj, bool single_line);
 		[DllImport(Library.Name)]
-		protected static extern bool elm_scrolled_entry_single_line_get (Evas.EvasObjectPtr obj);
+		protected static extern bool elm_scrolled_entry_single_line_get (IntPtr obj);
 
 		[DllImport(Library.Name)]
-		protected static extern void elm_scrolled_entry_entry_set (Evas.EvasObjectPtr obj, string entry);
+		protected static extern void elm_scrolled_entry_entry_set (IntPtr obj, string entry);
 		[DllImport(Library.Name)]
-		protected static extern Evas.EvasObjectPtr elm_scrolled_entry_entry_get (Evas.EvasObjectPtr obj);
+		protected static extern IntPtr elm_scrolled_entry_entry_get (IntPtr obj);
 		
 		[DllImport(Library.Name)]
-		protected static extern void elm_scrolled_entry_editable_set (Evas.EvasObjectPtr obj, bool editable);
+		protected static extern void elm_scrolled_entry_editable_set (IntPtr obj, bool editable);
 		[DllImport(Library.Name)]
-		protected static extern bool elm_scrolled_entry_editable_get (Evas.EvasObjectPtr obj);
+		protected static extern bool elm_scrolled_entry_editable_get (IntPtr obj);
 
 		[DllImport(Library.Name)]
-		protected static extern void elm_scrolled_entry_password_set (Evas.EvasObjectPtr obj, bool password);
+		protected static extern void elm_scrolled_entry_password_set (IntPtr obj, bool password);
 		[DllImport(Library.Name)]
-		protected static extern bool elm_scrolled_entry_password_get (Evas.EvasObjectPtr obj);
+		protected static extern bool elm_scrolled_entry_password_get (IntPtr obj);
 
 		[DllImport(Library.Name)]
-		protected static extern Evas.EvasObjectPtr elm_scrolled_entry_selection_get (Evas.EvasObjectPtr obj);
+		protected static extern IntPtr elm_scrolled_entry_selection_get (IntPtr obj);
 		
 	}
 }

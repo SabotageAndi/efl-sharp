@@ -30,12 +30,12 @@ namespace Efl.Elementary
 		
 		public ScrolledEntry (Evas.EvasObject parent)
 		{
-			Raw = elm_scrolled_entry_add (parent.Raw);
+			Raw.Pointer = elm_scrolled_entry_add (parent.Raw.Pointer);
 		}
 
 		public bool IsSingleLine {
-			get { return elm_scrolled_entry_single_line_get (this.Raw); }
-			set { elm_scrolled_entry_single_line_set (this.Raw, value); }
+			get { return elm_scrolled_entry_single_line_get (this.Raw.Pointer); }
+			set { elm_scrolled_entry_single_line_set (this.Raw.Pointer, value); }
 		}
 
 		public bool IsMultiline {
@@ -43,35 +43,35 @@ namespace Efl.Elementary
 			set { IsSingleLine = !value; }
 		}
 
-		private string GetStringFromObjectPtr (Evas.EvasObjectPtr objectPtr)
+		private string GetStringFromObjectPtr (IntPtr objectPtr)
 		{
-			string result = Marshal.PtrToStringAnsi (objectPtr.Pointer);
+			string result = Marshal.PtrToStringAnsi (objectPtr);
 			if (IsSingleLine)
 				result = result.Trim ();
 			return result;
 		}
 
 		public string Text {
-			get { return GetStringFromObjectPtr (elm_scrolled_entry_entry_get (this.Raw)); }
-			set { elm_scrolled_entry_entry_set (this.Raw, value); }
+			get { return GetStringFromObjectPtr (elm_scrolled_entry_entry_get (this.Raw.Pointer)); }
+			set { elm_scrolled_entry_entry_set (this.Raw.Pointer, value); }
 		}
 
 		public bool IsEditable {
-			get { return elm_scrolled_entry_editable_get (this.Raw); }
-			set { elm_scrolled_entry_editable_set (this.Raw, value); }
+			get { return elm_scrolled_entry_editable_get (this.Raw.Pointer); }
+			set { elm_scrolled_entry_editable_set (this.Raw.Pointer, value); }
 		}
 
 		public bool PasswordMode {
-			get { return elm_scrolled_entry_password_get (this.Raw); }
-			set { elm_scrolled_entry_password_set (this.Raw, value); }
+			get { return elm_scrolled_entry_password_get (this.Raw.Pointer); }
+			set { elm_scrolled_entry_password_set (this.Raw.Pointer, value); }
 		}
 
 		public string SelectedText {
-			get { return GetStringFromObjectPtr (elm_scrolled_entry_selection_get (this.Raw)); }
+			get { return GetStringFromObjectPtr (elm_scrolled_entry_selection_get (this.Raw.Pointer)); }
 		}
 
 		public event EventHandler OnChangedEvent {
-			add { this.SmartCallbackAdd ("changed", value, new Evas.EvasObjectPtr ()); }
+			add { this.SmartCallbackAdd ("changed", value, new IntPtr ()); }
 			remove { this.SmartCallbackRemove ("changed", value); }
 		}
 	}

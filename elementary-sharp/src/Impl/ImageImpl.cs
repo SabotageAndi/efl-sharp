@@ -31,49 +31,49 @@ namespace Efl.Elementary.Impl
 		}
 
 		[DllImport(Library.Name)]
-		protected static extern Evas.EvasObjectPtr elm_image_add(Evas.EvasObjectPtr parent);
+		protected static extern IntPtr elm_image_add(IntPtr parent);
 
 		[DllImport(Library.Name)]
-		protected static extern void elm_image_file_get(Evas.EvasObjectPtr obj, Evas.EvasObjectPtr file, Evas.EvasObjectPtr edjeGroup);
+		protected static extern void elm_image_file_get(IntPtr obj, IntPtr file, IntPtr edjeGroup);
 
 		[DllImport(Library.Name)]
-		protected static extern bool elm_image_file_set(Evas.EvasObjectPtr obj, string file, string edjeGroup);
+		protected static extern bool elm_image_file_set(IntPtr obj, string file, string edjeGroup);
 
 		[DllImport(Library.Name)]
-		protected static extern bool elm_image_fill_outside_get(Evas.EvasObjectPtr obj);
+		protected static extern bool elm_image_fill_outside_get(IntPtr obj);
 
 		[DllImport(Library.Name)]
-		protected static extern void elm_image_fill_outside_set(Evas.EvasObjectPtr obj, bool fill_outside);
+		protected static extern void elm_image_fill_outside_set(IntPtr obj, bool fill_outside);
 
 		[DllImport(Library.Name)]
-		protected static extern bool elm_image_no_scale_get(Evas.EvasObjectPtr obj);
+		protected static extern bool elm_image_no_scale_get(IntPtr obj);
 
 		[DllImport(Library.Name)]
-		protected static extern void elm_image_no_scale_set(Evas.EvasObjectPtr obj, bool no_scale);
+		protected static extern void elm_image_no_scale_set(IntPtr obj, bool no_scale);
 
 		[DllImport(Library.Name)]
-		protected static extern ImageOrientation elm_image_orient_get(Evas.EvasObjectPtr obj);
+		protected static extern ImageOrientation elm_image_orient_get(IntPtr obj);
 
 		[DllImport(Library.Name)]
-		protected static extern void elm_image_orient_set(Evas.EvasObjectPtr obj, ImageOrientation orientation);
+		protected static extern void elm_image_orient_set(IntPtr obj, ImageOrientation orientation);
 
 		[DllImport(Library.Name)]
-		protected static extern int elm_image_prescale_get(Evas.EvasObjectPtr obj);
+		protected static extern int elm_image_prescale_get(IntPtr obj);
 
 		[DllImport(Library.Name)]
-		protected static extern void elm_image_prescale_set(Evas.EvasObjectPtr obj, int size);
+		protected static extern void elm_image_prescale_set(IntPtr obj, int size);
 
 		[DllImport(Library.Name)]
-		protected static extern void elm_image_scale_get(Evas.EvasObjectPtr obj, IntPtr scale_up, IntPtr scale_down);
+		protected static extern void elm_image_scale_get(IntPtr obj, IntPtr scale_up, IntPtr scale_down);
 
 		[DllImport(Library.Name)]
-		protected static extern void elm_image_scale_set(Evas.EvasObjectPtr obj, bool scale_up, bool scale_down);
+		protected static extern void elm_image_scale_set(IntPtr obj, bool scale_up, bool scale_down);
 
 		[DllImport(Library.Name)]
-		protected static extern bool elm_image_smooth_get(Evas.EvasObjectPtr obj);
+		protected static extern bool elm_image_smooth_get(IntPtr obj);
 
 		[DllImport(Library.Name)]
-		protected static extern void elm_image_smooth_set(Evas.EvasObjectPtr obj, bool smooth);
+		protected static extern void elm_image_smooth_set(IntPtr obj, bool smooth);
 	}
 }
 

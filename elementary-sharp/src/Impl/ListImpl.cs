@@ -32,58 +32,58 @@ namespace Efl.Elementary.Impl
 		}
 		
 		[DllImport(Library.Name)]
-		protected static extern Evas.EvasObjectPtr elm_list_add (Evas.EvasObjectPtr parent);
+		protected static extern IntPtr elm_list_add (IntPtr parent);
 
 		[DllImport(Library.Name)]
-		protected static extern ListItemPtr elm_list_item_append (Evas.EvasObjectPtr obj, string label, Evas.EvasObjectPtr icon, Evas.EvasObjectPtr end, Evas.EvasSmartCallback func, IntPtr data);
+		protected static extern ListItemPtr elm_list_item_append (IntPtr obj, string label, IntPtr icon, IntPtr end, Evas.EvasSmartCallback func, IntPtr data);
 
 		[DllImport(Library.Name)]
-		protected static extern ListItemPtr elm_list_item_sorted_insert (Evas.EvasObjectPtr obj, string label, Evas.EvasObjectPtr icon, Evas.EvasObjectPtr end, Evas.EvasSmartCallback func, IntPtr data);
+		protected static extern ListItemPtr elm_list_item_sorted_insert (IntPtr obj, string label, IntPtr icon, IntPtr end, Evas.EvasSmartCallback func, IntPtr data);
 
 		[DllImport(Library.Name)]
-		protected static extern ListItemPtr elm_list_item_prepend (Evas.EvasObjectPtr obj, string label, Evas.EvasObjectPtr icon, Evas.EvasObjectPtr end, Evas.EvasSmartCallback func, IntPtr data);
+		protected static extern ListItemPtr elm_list_item_prepend (IntPtr obj, string label, IntPtr icon, IntPtr end, Evas.EvasSmartCallback func, IntPtr data);
 
 		[DllImport(Library.Name)]
-		protected static extern ListItemPtr elm_list_item_insert_before (Evas.EvasObjectPtr obj, ListItemPtr before, string label, Evas.EvasObjectPtr icon, Evas.EvasObjectPtr end, Evas.EvasSmartCallback func, IntPtr data);
+		protected static extern ListItemPtr elm_list_item_insert_before (IntPtr obj, ListItemPtr before, string label, IntPtr icon, IntPtr end, Evas.EvasSmartCallback func, IntPtr data);
 
 		[DllImport(Library.Name)]
-		protected static extern ListItemPtr elm_list_item_insert_after (Evas.EvasObjectPtr obj, ListItemPtr after, string label, Evas.EvasObjectPtr icon, Evas.EvasObjectPtr end, Evas.EvasSmartCallback func, IntPtr data);
+		protected static extern ListItemPtr elm_list_item_insert_after (IntPtr obj, ListItemPtr after, string label, IntPtr icon, IntPtr end, Evas.EvasSmartCallback func, IntPtr data);
 
 		[DllImport(Library.Name)]
-		protected static extern void elm_list_clear (Evas.EvasObjectPtr obj);
+		protected static extern void elm_list_clear (IntPtr obj);
 
 		[DllImport(Library.Name)]
-		protected static extern void elm_list_go (Evas.EvasObjectPtr obj);
+		protected static extern void elm_list_go (IntPtr obj);
 
 		[DllImport(Library.Name)]
-		protected static extern void elm_list_multi_select_set (Evas.EvasObjectPtr obj, bool multiSelect);
+		protected static extern void elm_list_multi_select_set (IntPtr obj, bool multiSelect);
 
 		[DllImport(Library.Name)]
-		protected static extern bool elm_list_multi_select_get (Evas.EvasObjectPtr obj);
+		protected static extern bool elm_list_multi_select_get (IntPtr obj);
 
 		[DllImport(Library.Name)]
-		protected static extern ListMode elm_list_mode_get (Evas.EvasObjectPtr obj);
+		protected static extern ListMode elm_list_mode_get (IntPtr obj);
 
 		[DllImport(Library.Name)]
-		protected static extern void elm_list_mode_set (Evas.EvasObjectPtr obj, ListMode listMode);
+		protected static extern void elm_list_mode_set (IntPtr obj, ListMode listMode);
 
 		[DllImport(Library.Name)]
-		protected static extern void elm_list_horizontal_set (Evas.EvasObjectPtr obj, bool horizontal);
+		protected static extern void elm_list_horizontal_set (IntPtr obj, bool horizontal);
 
 		[DllImport(Library.Name)]
-		protected static extern bool elm_list_horizontal_get (Evas.EvasObjectPtr obj);
+		protected static extern bool elm_list_horizontal_get (IntPtr obj);
 		
 		[DllImport(Library.Name)]
-		protected static extern void elm_list_always_select_mode_set(Evas.EvasObjectPtr obj, bool alwaysSelectMode);
+		protected static extern void elm_list_always_select_mode_set(IntPtr obj, bool alwaysSelectMode);
 		
 		[DllImport(Library.Name)]
-		protected static extern bool elm_list_always_select_mode_get(Evas.EvasObjectPtr obj);
+		protected static extern bool elm_list_always_select_mode_get(IntPtr obj);
 	
 		[DllImport(Library.Name)]
-		protected static extern Efl.Eina.EinaListPtr  elm_list_items_get(Evas.EvasObjectPtr obj);
+		protected static extern Efl.Eina.EinaListPtr  elm_list_items_get(IntPtr obj);
 		
 		[DllImport(Library.Name)]
-		protected static extern ListItemPtr elm_list_selected_item_get(Evas.EvasObjectPtr obj);
+		protected static extern ListItemPtr elm_list_selected_item_get(IntPtr obj);
 	}
 }
 

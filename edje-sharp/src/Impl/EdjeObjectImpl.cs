@@ -28,7 +28,7 @@ namespace Efl.Edje.Impl
 	public class EdjeObjectImpl
 	{
 		[DllImport(Edje.Name)]
-		protected static extern EvasObjectPtr edje_object_part_external_object_get (EvasObjectPtr evasObject, string part); 
+		protected static extern IntPtr edje_object_part_external_object_get (IntPtr evasObject, string part); 
 	}
 }
 

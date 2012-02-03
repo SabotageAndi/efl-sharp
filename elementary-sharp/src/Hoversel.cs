@@ -28,26 +28,26 @@ namespace Efl.Elementary
 	{
 		public Hoversel (Evas.EvasObject parent)
 		{
-			Raw = elm_hoversel_add (parent.Raw);
+			Raw.Pointer = elm_hoversel_add (parent.Raw.Pointer);
 		}
 
 		public bool IsHorizontal {
-			get { return elm_hoversel_horizontal_get (this.Raw); }
-			set { elm_hoversel_horizontal_set (this.Raw, value); }
+			get { return elm_hoversel_horizontal_get (this.Raw.Pointer); }
+			set { elm_hoversel_horizontal_set (this.Raw.Pointer, value); }
 		}
 
 		public void BeginHover ()
 		{
-			elm_hoversel_hover_begin (this.Raw);
+			elm_hoversel_hover_begin (this.Raw.Pointer);
 		}
 
 		public void EndHover ()
 		{
-			elm_hoversel_hover_end (this.Raw);
+			elm_hoversel_hover_end (this.Raw.Pointer);
 		}
 
 		public bool IsExpanded {
-			get { return elm_hoversel_expanded_get (this.Raw); }
+			get { return elm_hoversel_expanded_get (this.Raw.Pointer); }
 		}
 		
 	}

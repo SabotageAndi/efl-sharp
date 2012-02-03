@@ -28,34 +28,34 @@ namespace Efl.Elementary.Impl
 	public class AnchorViewImpl : Evas.EvasObject
 	{
 		[DllImport(Library.Name)]
-		protected static extern EvasObjectPtr elm_anchorview_add(EvasObjectPtr parent);
+		protected static extern IntPtr elm_anchorview_add(IntPtr parent);
 
 		[DllImport(Library.Name)]
-		protected static extern void elm_anchorview_text_set(EvasObjectPtr obj, string text);
+		protected static extern void elm_anchorview_text_set(IntPtr obj, string text);
 
 		[DllImport(Library.Name)]
-		protected static extern IntPtr elm_anchorview_text_get(EvasObjectPtr obj);
+		protected static extern IntPtr elm_anchorview_text_get(IntPtr obj);
 
 		[DllImport(Library.Name)]
-		protected static extern void elm_anchorview_hover_parent_set(EvasObjectPtr obj, EvasObjectPtr parent);
+		protected static extern void elm_anchorview_hover_parent_set(IntPtr obj, IntPtr parent);
 
 		[DllImport(Library.Name)]
-		protected static extern EvasObjectPtr elm_anchorview_hover_parent_get(EvasObjectPtr obj);
+		protected static extern IntPtr elm_anchorview_hover_parent_get(IntPtr obj);
 
 		[DllImport(Library.Name)]
-		protected static extern void elm_anchorview_hover_style_set(EvasObjectPtr obj, string style);
+		protected static extern void elm_anchorview_hover_style_set(IntPtr obj, string style);
 
 		[DllImport(Library.Name)]
-		protected static extern IntPtr elm_anchorview_hover_style_get(EvasObjectPtr obj);
+		protected static extern IntPtr elm_anchorview_hover_style_get(IntPtr obj);
 
 		[DllImport(Library.Name)]
-		protected static extern void elm_anchorview_hover_end(EvasObjectPtr obj);
+		protected static extern void elm_anchorview_hover_end(IntPtr obj);
 
 		[DllImport(Library.Name)]
-		protected static extern void elm_anchorview_bounce_set(EvasObjectPtr obj, bool h_bounce, bool v_bounce);
+		protected static extern void elm_anchorview_bounce_set(IntPtr obj, bool h_bounce, bool v_bounce);
 		
 		[DllImport(Library.Name)]
-		protected static extern void elm_anchorview_bounce_get(EvasObjectPtr obj, IntPtr h_bounce, IntPtr v_bounce);
+		protected static extern void elm_anchorview_bounce_get(IntPtr obj, IntPtr h_bounce, IntPtr v_bounce);
 		
 	}
 }

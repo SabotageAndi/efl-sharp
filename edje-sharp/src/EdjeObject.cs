@@ -31,7 +31,7 @@ namespace Efl.Edje
 		{
 			var evasObject = new TEvasObject();
 			
-			evasObject.Raw = edje_object_part_external_object_get(edje.Raw, part);
+			evasObject.Raw.Pointer = edje_object_part_external_object_get(edje.Raw.Pointer, part);
 			
 			return evasObject;
 		}

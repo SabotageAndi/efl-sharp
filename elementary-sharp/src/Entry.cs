@@ -30,12 +30,12 @@ namespace Efl.Elementary
 		
 		public Entry (Evas.EvasObject parent)
 		{
-			Raw = elm_entry_add (parent.Raw);
+			Raw.Pointer = elm_entry_add (parent.Raw.Pointer);
 		}
 
 		public bool IsSingleLine {
-			get { return elm_entry_single_line_get (this.Raw); }
-			set { elm_entry_single_line_set (this.Raw, value); }
+			get { return elm_entry_single_line_get (this.Raw.Pointer); }
+			set { elm_entry_single_line_set (this.Raw.Pointer, value); }
 		}
 
 		public bool IsMultiline {
@@ -52,8 +52,8 @@ namespace Efl.Elementary
 		}
 
 		public string Text {
-			get { return GetStringFromObjectPtr (elm_entry_entry_get (this.Raw)); }
-			set { elm_entry_entry_set (this.Raw, value); }
+			get { return GetStringFromObjectPtr (elm_entry_entry_get (this.Raw.Pointer)); }
+			set { elm_entry_entry_set (this.Raw.Pointer, value); }
 		}
 
 		private string ConvertToUTF8 (string markup)
@@ -62,21 +62,21 @@ namespace Efl.Elementary
 		}
 
 		public bool IsEditable {
-			get { return elm_entry_editable_get (this.Raw); }
-			set { elm_entry_editable_set (this.Raw, value); }
+			get { return elm_entry_editable_get (this.Raw.Pointer); }
+			set { elm_entry_editable_set (this.Raw.Pointer, value); }
 		}
 
 		public bool PasswordMode {
-			get { return elm_entry_password_get (this.Raw); }
-			set { elm_entry_password_set (this.Raw, value); }
+			get { return elm_entry_password_get (this.Raw.Pointer); }
+			set { elm_entry_password_set (this.Raw.Pointer, value); }
 		}
 
 		public string SelectedText {
-			get { return GetStringFromObjectPtr (elm_entry_selection_get (this.Raw)); }
+			get { return GetStringFromObjectPtr (elm_entry_selection_get (this.Raw.Pointer)); }
 		}
 
 		public event EventHandler OnChangedEvent {
-			add { this.SmartCallbackAdd ("changed", value, new Evas.EvasObjectPtr ()); }
+			add { this.SmartCallbackAdd ("changed", value, new IntPtr ()); }
 			remove { this.SmartCallbackRemove ("changed", value); }
 		}
 	}

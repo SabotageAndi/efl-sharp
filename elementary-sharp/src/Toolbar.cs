@@ -33,27 +33,27 @@ namespace Efl.Elementary
 		
 		public Toolbar(Evas.EvasObject parent)
 		{
-			Raw = elm_toolbar_add(parent.Raw);
+			Raw.Pointer = elm_toolbar_add(parent.Raw.Pointer);
 		}
 		
 		public ToolbarItemPtr Append(string icon, string label, EvasSmartCallback clickDelegate)
 		{
-			return elm_toolbar_item_append(this.Raw, icon, label, clickDelegate, IntPtr.Zero);
+			return elm_toolbar_item_append(this.Raw.Pointer, icon, label, clickDelegate, IntPtr.Zero);
 		}
 		
 		public ToolbarItemPtr Prepend(string icon, string label, EvasSmartCallback clickDelegate)
 		{
-			return elm_toolbar_item_prepend(this.Raw, icon, label, clickDelegate, IntPtr.Zero);
+			return elm_toolbar_item_prepend(this.Raw.Pointer, icon, label, clickDelegate, IntPtr.Zero);
 		}
 		
 		public ToolbarItemPtr InsertAfter(ToolbarItem after, string icon, string label, EvasSmartCallback clickDelegate)
 		{
-			return elm_toolbar_item_insert_after(this.Raw, after.Raw, icon, label, clickDelegate, IntPtr.Zero);
+			return elm_toolbar_item_insert_after(this.Raw.Pointer, after.Raw, icon, label, clickDelegate, IntPtr.Zero);
 		}
 		
 		public ToolbarItemPtr InsertBefore(ToolbarItem before, string icon, string label, EvasSmartCallback clickDelegate)
 		{
-			return elm_toolbar_item_insert_before(this.Raw, before.Raw, icon, label, clickDelegate, IntPtr.Zero);
+			return elm_toolbar_item_insert_before(this.Raw.Pointer, before.Raw, icon, label, clickDelegate, IntPtr.Zero);
 		}
 	}
 }

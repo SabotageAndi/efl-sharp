@@ -27,19 +27,19 @@ namespace Efl.Elementary.Impl
 	public class WindowImpl : Evas.EvasObject
 	{
 		[DllImport(Library.Name)]
-		protected static extern Evas.EvasObjectPtr elm_win_add (ref Efl.Evas.EvasObject parent, string name, int type);
+		protected static extern IntPtr elm_win_add (IntPtr parent, string name, int type);
 		
 		[DllImport(Library.Name)]
-		protected static extern Evas.EvasObjectPtr elm_win_util_standard_add(string name, string title);
+		protected static extern IntPtr elm_win_util_standard_add(string name, string title);
 		
 		[DllImport(Library.Name)]
-		protected static extern void elm_win_activate (Evas.EvasObjectPtr obj);
+		protected static extern void elm_win_activate (IntPtr obj);
 		
 		[DllImport(Library.Name)]
-		protected static extern void elm_win_title_set (Evas.EvasObjectPtr obj, string title);
+		protected static extern void elm_win_title_set (IntPtr obj, string title);
 		
 		[DllImport(Library.Name)]
-		protected static extern void elm_win_resize_object_add(Evas.EvasObjectPtr obj, Evas.EvasObjectPtr subobj);
+		protected static extern void elm_win_resize_object_add(IntPtr obj, IntPtr subobj);
 		
 	}
 }

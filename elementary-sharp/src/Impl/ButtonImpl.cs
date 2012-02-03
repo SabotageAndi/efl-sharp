@@ -32,10 +32,10 @@ namespace Efl.Elementary.Impl
 		}
 
 		[DllImport(Library.Name)]
-		protected static extern Evas.EvasObjectPtr elm_button_add(Evas.EvasObjectPtr parent);
+		protected static extern IntPtr elm_button_add(IntPtr parent);
 
 		[DllImport(Library.Name)]
-		protected static extern void elm_button_label_set(Evas.EvasObjectPtr obj, string label);
+		protected static extern void elm_button_label_set(IntPtr obj, string label);
 	}
 }
 

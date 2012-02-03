@@ -28,23 +28,23 @@ namespace Efl.Elementary
 	{
 		public Check (Evas.EvasObject parent)
 		{
-			Raw = elm_check_add (parent.Raw);
+			Raw.Pointer = elm_check_add (parent.Raw.Pointer);
 		}
 
 		public event EventHandler OnChangedEvent {
-			add { this.SmartCallbackAdd ("changed", value, new Evas.EvasObjectPtr ()); }
+			add { this.SmartCallbackAdd ("changed", value, new IntPtr ()); }
 			remove { this.SmartCallbackRemove ("changed", value); }
 		}
 
 		public string Label {
-			get { return elm_check_label_get (this.Raw); }
-			set { elm_check_label_set (this.Raw, value); }
+			get { return elm_check_label_get (this.Raw.Pointer); }
+			set { elm_check_label_set (this.Raw.Pointer, value); }
 		}
 
 
 		public bool State {
-			get { return elm_check_state_get (this.Raw); }
-			set { elm_check_state_set (this.Raw, value); }
+			get { return elm_check_state_get (this.Raw.Pointer); }
+			set { elm_check_state_set (this.Raw.Pointer, value); }
 		}
 
 		private Type _contentType;
@@ -52,13 +52,13 @@ namespace Efl.Elementary
 
 			get {
 				var content = (Evas.EvasObject)Activator.CreateInstance (_contentType);
-				content.Raw = elm_check_icon_get (this.Raw);
+				content.Raw.Pointer = elm_check_icon_get (this.Raw.Pointer);
 				
 				return content;
 			}
 			set {
 				_contentType = value.GetType ();
-				elm_check_icon_set (this.Raw, value.Raw);
+				elm_check_icon_set (this.Raw.Pointer, value.Raw.Pointer);
 			}
 		}
 
@@ -68,7 +68,7 @@ namespace Efl.Elementary
 				return null;
 			
 			var content = (Evas.EvasObject)Activator.CreateInstance (_contentType);
-			content.Raw = elm_check_icon_unset (this.Raw);
+			content.Raw.Pointer = elm_check_icon_unset (this.Raw.Pointer);
 			
 			return content;
 		}

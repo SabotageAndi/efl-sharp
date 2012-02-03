@@ -30,23 +30,23 @@ namespace Efl.Elementary
 	{
 		public BackGround (Evas.EvasObject parent)
 		{
-			Raw = elm_bg_add (parent.Raw);
+			Raw.Pointer = elm_bg_add (parent.Raw.Pointer);
 		}
 
 		public void SetBackgroundFile (string fileName, string edjeGroup)
 		{
-			elm_bg_file_set (this.Raw, fileName, edjeGroup);
+			elm_bg_file_set (this.Raw.Pointer, fileName, edjeGroup);
 		}
 
 		public void GetBackgroundFile (out string fileName, out string edjeGroup)
 		{
-			EvasObjectPtr filePtr;
-			EvasObjectPtr edjeGroupPtr;
+			IntPtr filePtr;
+			IntPtr edjeGroupPtr;
 			
-			elm_bg_file_get (this.Raw, filePtr, edjeGroupPtr);
+			elm_bg_file_get (this.Raw.Pointer, filePtr, edjeGroupPtr);
 			
-			fileName = Marshal.PtrToStringAuto (filePtr.Pointer);
-			edjeGroup = Marshal.PtrToStringAuto (edjeGroupPtr.Pointer);
+			fileName = Marshal.PtrToStringAuto (filePtr);
+			edjeGroup = Marshal.PtrToStringAuto (edjeGroupPtr);
 		}
 	}
 }

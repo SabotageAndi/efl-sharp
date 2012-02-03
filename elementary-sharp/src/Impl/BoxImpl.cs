@@ -31,25 +31,25 @@ namespace Efl.Elementary.Impl
 		}
 
 		[DllImport(Library.Name)]
-		protected static extern Evas.EvasObjectPtr elm_box_add(Evas.EvasObjectPtr parent);
+		protected static extern IntPtr elm_box_add(IntPtr parent);
 
 		[DllImport(Library.Name)]
-		protected static extern Evas.EvasObjectPtr elm_box_pack_end(Evas.EvasObjectPtr parent, Evas.EvasObjectPtr child);
+		protected static extern IntPtr elm_box_pack_end(IntPtr parent, IntPtr child);
 
 		[DllImport(Library.Name)]
-		protected static extern Evas.EvasObjectPtr elm_box_pack_start(Evas.EvasObjectPtr parent, Evas.EvasObjectPtr child);
+		protected static extern IntPtr elm_box_pack_start(IntPtr parent, IntPtr child);
 
 		[DllImport(Library.Name)]
-		protected static extern void elm_box_horizontal_set(Evas.EvasObjectPtr obj, bool isHorizontal);
+		protected static extern void elm_box_horizontal_set(IntPtr obj, bool isHorizontal);
 
 		[DllImport(Library.Name)]
-		protected static extern bool elm_box_horizontal_get(Evas.EvasObjectPtr obj);
+		protected static extern bool elm_box_horizontal_get(IntPtr obj);
 
 		[DllImport(Library.Name)]
-		protected static extern void elm_box_homogenous_set(Evas.EvasObjectPtr obj, bool isHomogenous);
+		protected static extern void elm_box_homogenous_set(IntPtr obj, bool isHomogenous);
 
 		[DllImport(Library.Name)]
-		protected static extern bool elm_box_homogenous_get(Evas.EvasObjectPtr obj);
+		protected static extern bool elm_box_homogenous_get(IntPtr obj);
 	}
 }
 

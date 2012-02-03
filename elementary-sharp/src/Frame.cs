@@ -28,7 +28,7 @@ namespace Efl.Elementary
 	{
 		public Frame (Evas.EvasObject parent)
 		{
-			Raw = elm_frame_add (parent.Raw);
+			Raw.Pointer = elm_frame_add (parent.Raw.Pointer);
 		}
 		
 		public FrameStyle Style
@@ -62,7 +62,7 @@ namespace Efl.Elementary
 					break;
 				}
 				
-                elm_object_style_set(this.Raw, frameStyle);
+                elm_object_style_set(this.Raw.Pointer, frameStyle);
 			}
 		}
 		
@@ -73,12 +73,12 @@ namespace Efl.Elementary
 			set{
 				_contentType = value.GetType();
 				
-				elm_frame_content_set(this.Raw, value.Raw);
+				elm_frame_content_set(this.Raw.Pointer, value.Raw.Pointer);
 			}
 			get{
 				
 				var content = (Evas.EvasObject)Activator.CreateInstance(_contentType);
-				content.Raw = elm_frame_content_get(this.Raw);				
+				content.Raw.Pointer = elm_frame_content_get(this.Raw.Pointer);				
 				
 				return content;
 			}

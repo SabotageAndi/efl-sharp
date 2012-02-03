@@ -31,7 +31,7 @@ namespace Efl.Elementary
 		
 		public List (Evas.EvasObject parent)
 		{
-			this.Raw = elm_list_add (parent.Raw);
+			this.Raw.Pointer = elm_list_add (parent.Raw.Pointer);
 		}
 
 		private static IntPtr GetPtrToObject (object data)
@@ -44,66 +44,66 @@ namespace Efl.Elementary
 			return dataPtr;
 		}
 
-		public ListItemPtr Append (string label, Evas.EvasObjectPtr iconLeft, Evas.EvasObjectPtr iconRight, Evas.EvasSmartCallback onClicked, object data)
+		public ListItemPtr Append (string label, IntPtr iconLeft, IntPtr iconRight, Evas.EvasSmartCallback onClicked, object data)
 		{
-			return elm_list_item_append (this.Raw, label, iconLeft, iconRight, onClicked, GetPtrToObject (data));
+			return elm_list_item_append (this.Raw.Pointer, label, iconLeft, iconRight, onClicked, GetPtrToObject (data));
 		}
 
-		public ListItemPtr SortedInsert (string label, Evas.EvasObjectPtr iconLeft, Evas.EvasObjectPtr iconRight, Evas.EvasSmartCallback onClicked, object data)
+		public ListItemPtr SortedInsert (string label, IntPtr iconLeft, IntPtr iconRight, Evas.EvasSmartCallback onClicked, object data)
 		{
-			return elm_list_item_sorted_insert (this.Raw, label, iconLeft, iconRight, onClicked, GetPtrToObject (data));
+			return elm_list_item_sorted_insert (this.Raw.Pointer, label, iconLeft, iconRight, onClicked, GetPtrToObject (data));
 		}
 
-		public ListItemPtr Prepend (string label, Evas.EvasObjectPtr iconLeft, Evas.EvasObjectPtr iconRight, Evas.EvasSmartCallback onClicked, object data)
+		public ListItemPtr Prepend (string label, IntPtr iconLeft, IntPtr iconRight, Evas.EvasSmartCallback onClicked, object data)
 		{
-			return elm_list_item_prepend (this.Raw, label, iconLeft, iconRight, onClicked, GetPtrToObject (data));
+			return elm_list_item_prepend (this.Raw.Pointer, label, iconLeft, iconRight, onClicked, GetPtrToObject (data));
 		}
 
-		public ListItemPtr InsertBefore (string label, ListItemPtr before, Evas.EvasObjectPtr iconLeft, Evas.EvasObjectPtr iconRight, Evas.EvasSmartCallback onClicked, object data)
+		public ListItemPtr InsertBefore (string label, ListItemPtr before, IntPtr iconLeft, IntPtr iconRight, Evas.EvasSmartCallback onClicked, object data)
 		{
-			return elm_list_item_insert_before (this.Raw, before, label, iconLeft, iconRight, onClicked, GetPtrToObject (data));
+			return elm_list_item_insert_before (this.Raw.Pointer, before, label, iconLeft, iconRight, onClicked, GetPtrToObject (data));
 		}
 
-		public ListItemPtr InsertAfter (string label, ListItemPtr before, Evas.EvasObjectPtr iconLeft, Evas.EvasObjectPtr iconRight, Evas.EvasSmartCallback onClicked, object data)
+		public ListItemPtr InsertAfter (string label, ListItemPtr before, IntPtr iconLeft, IntPtr iconRight, Evas.EvasSmartCallback onClicked, object data)
 		{
-			return elm_list_item_insert_after (this.Raw, before, label, iconLeft, iconRight, onClicked, GetPtrToObject (data));
+			return elm_list_item_insert_after (this.Raw.Pointer, before, label, iconLeft, iconRight, onClicked, GetPtrToObject (data));
 		}
 
 		public void Clear ()
 		{
-			elm_list_clear (this.Raw);
+			elm_list_clear (this.Raw.Pointer);
 		}
 
 		public void Go ()
 		{
-			elm_list_go (this.Raw);
+			elm_list_go (this.Raw.Pointer);
 		}
 
 		public bool MultiSelect {
-			get { return elm_list_multi_select_get (this.Raw); }
-			set { elm_list_multi_select_set (this.Raw, value); }
+			get { return elm_list_multi_select_get (this.Raw.Pointer); }
+			set { elm_list_multi_select_set (this.Raw.Pointer, value); }
 		}
 
 		public ListMode Mode {
-			get { return elm_list_mode_get (this.Raw); }
-			set { elm_list_mode_set (this.Raw, value); }
+			get { return elm_list_mode_get (this.Raw.Pointer); }
+			set { elm_list_mode_set (this.Raw.Pointer, value); }
 		}
 
 		public bool Horizontal {
-			get { return elm_list_horizontal_get (this.Raw); }
-			set { elm_list_horizontal_set (this.Raw, value); }
+			get { return elm_list_horizontal_get (this.Raw.Pointer); }
+			set { elm_list_horizontal_set (this.Raw.Pointer, value); }
 		}
 		
 		public bool AlwaysSelectMode
 		{
-			get{ return elm_list_always_select_mode_get(this.Raw);}
-			set{ elm_list_always_select_mode_set(this.Raw, value);}
+			get{ return elm_list_always_select_mode_get(this.Raw.Pointer);}
+			set{ elm_list_always_select_mode_set(this.Raw.Pointer, value);}
 		}
 		
 		public Efl.Eina.EinaList Items
 		{
 			get {
-				var list = elm_list_items_get(this.Raw);
+				var list = elm_list_items_get(this.Raw.Pointer);
 				return new EinaList(list);
 			}
 		}
@@ -111,7 +111,7 @@ namespace Efl.Elementary
 		public ListItem SelectedItem
 		{
 			get {
-				var selectedItemPtr = elm_list_selected_item_get(this.Raw);
+				var selectedItemPtr = elm_list_selected_item_get(this.Raw.Pointer);
 				return new ListItem(selectedItemPtr);
 			}
 		}
@@ -119,7 +119,7 @@ namespace Efl.Elementary
 		public event EventHandler SelectedEvent
 		{
 			add{
-				this.SmartCallbackAdd(Efl.Common.EventNames.Selected, value, new Evas.EvasObjectPtr());
+				this.SmartCallbackAdd(Efl.Common.EventNames.Selected, value, new IntPtr());
 			}
 			remove{
 				this.SmartCallbackRemove(Efl.Common.EventNames.Selected, value);

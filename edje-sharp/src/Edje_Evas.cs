@@ -28,27 +28,28 @@ namespace Efl.Edje
 	public static class Edje_Evas
 	{
 		[DllImport(Edje.Name)]
-		private static extern bool edje_object_file_set (Evas.EvasObjectPtr obj, string file, string group);
+		private static extern bool edje_object_file_set (IntPtr obj, string file, string group);
 		
 		public static bool SetEdjeFile(this Evas.EvasObject evasObject, string file, string group)
 		{
-			return edje_object_file_set(evasObject.Raw, file, group);
+			return edje_object_file_set(
+				evasObject.Raw.Pointer, file, group);
 		}
 		
 		[DllImport(Edje.Name)]
-		private static extern bool edje_object_part_text_set(Evas.EvasObjectPtr obj, string part, string text);
+		private static extern bool edje_object_part_text_set(IntPtr obj, string part, string text);
 		
 		public static bool SetPartText(this Evas.EvasObject evasObject, string part, string text)
 		{
-			return edje_object_part_text_set(evasObject.Raw, part, text);
+			return edje_object_part_text_set(evasObject.Raw.Pointer, part, text);
 		}
 		
 		[DllImport(Edje.Name)]
-		private static extern Evas.EvasObjectPtr edje_object_add(Evas.EvasPtr evasPtr);
+		private static extern IntPtr edje_object_add(Evas.EvasPtr evasPtr);
 		
 		public static Evas.EvasObject AddEvas(Evas.Evas evas)
 		{
-			return new Evas.EvasObject(edje_object_add(evas.Raw));
+			return new Evas.EvasObject( new Evas.EvasObjectPtr( edje_object_add(evas.Raw)));
 		}
 	}
 }

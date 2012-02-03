@@ -28,25 +28,25 @@ namespace Efl.Elementary.Impl
 	public class ToolbarImpl : Efl.Evas.EvasObject
 	{
 		[DllImport(Library.Name)]
-		protected static extern EvasObjectPtr elm_toolbar_add(EvasObjectPtr parent);
+		protected static extern IntPtr elm_toolbar_add(IntPtr parent);
 		
 		[DllImport(Library.Name)]
-		protected static extern void elm_toolbar_icon_size_set(EvasObjectPtr obj, int icon_size);
+		protected static extern void elm_toolbar_icon_size_set(IntPtr obj, int icon_size);
 		
 		[DllImport(Library.Name)]
-		protected static extern int elm_toolbar_icon_size_get(EvasObjectPtr obj);
+		protected static extern int elm_toolbar_icon_size_get(IntPtr obj);
 		
 		[DllImport(Library.Name)]
-		protected static extern ToolbarItemPtr elm_toolbar_item_append(EvasObjectPtr obj, string icon, string label, EvasSmartCallback func, IntPtr data);
+		protected static extern ToolbarItemPtr elm_toolbar_item_append(IntPtr obj, string icon, string label, EvasSmartCallback func, IntPtr data);
 		
 		[DllImport(Library.Name)]
-		protected static extern ToolbarItemPtr elm_toolbar_item_prepend(EvasObjectPtr obj, string icon, string label, EvasSmartCallback func, IntPtr data);
+		protected static extern ToolbarItemPtr elm_toolbar_item_prepend(IntPtr obj, string icon, string label, EvasSmartCallback func, IntPtr data);
 
 		[DllImport(Library.Name)]
-		protected static extern ToolbarItemPtr elm_toolbar_item_insert_before(EvasObjectPtr obj, ToolbarItemPtr before,  string icon, string label, EvasSmartCallback func, IntPtr data);
+		protected static extern ToolbarItemPtr elm_toolbar_item_insert_before(IntPtr obj, ToolbarItemPtr before,  string icon, string label, EvasSmartCallback func, IntPtr data);
 		
 		[DllImport(Library.Name)]
-		protected static extern ToolbarItemPtr elm_toolbar_item_insert_after(EvasObjectPtr obj, ToolbarItemPtr after,  string icon, string label, EvasSmartCallback func, IntPtr data);
+		protected static extern ToolbarItemPtr elm_toolbar_item_insert_after(IntPtr obj, ToolbarItemPtr after,  string icon, string label, EvasSmartCallback func, IntPtr data);
 		
 		
 		

@@ -28,7 +28,7 @@ namespace Efl.Elementary.Impl
 	public class ToolbarItemImpl : WidgetItem
 	{		
 		[DllImport(Library.Name)]
-		protected static extern Evas.EvasObjectPtr elm_toolbar_item_toolbar_get(ToolbarItemPtr item);
+		protected static extern IntPtr elm_toolbar_item_toolbar_get(ToolbarItemPtr item);
 		
 		[DllImport(Library.Name)]
 		protected static extern string elm_toolbar_item_icon_get(ToolbarItemPtr item);

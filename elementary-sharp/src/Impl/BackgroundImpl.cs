@@ -31,13 +31,13 @@ namespace Efl.Elementary.Impl
 		}
 		
 		[DllImport(Library.Name)]
-		protected static extern void elm_bg_file_set(Evas.EvasObjectPtr obj, string file, string edjeGroup);
+		protected static extern void elm_bg_file_set(IntPtr obj, string file, string edjeGroup);
 		
 		[DllImport(Library.Name)]
-		protected static extern void elm_bg_file_get(Evas.EvasObjectPtr obj,Evas.EvasObjectPtr file,Evas.EvasObjectPtr edjeGroup);
+		protected static extern void elm_bg_file_get(IntPtr obj,IntPtr file, IntPtr edjeGroup);
 		
 		[DllImport(Library.Name)]
-		protected static extern Evas.EvasObjectPtr elm_bg_add (Evas.EvasObjectPtr parent);
+		protected static extern IntPtr elm_bg_add (IntPtr parent);
 
 	}
 }

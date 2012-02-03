@@ -27,16 +27,20 @@ using System.Linq;
 
 namespace Efl.Evas
 {
-	[StructLayout(LayoutKind.Sequential)]
-	public struct EvasObjectPtr
+	public class EvasObjectPtr
 	{
+		public EvasObjectPtr()
+			:this(IntPtr.Zero)
+		{
+		}
+		
 		public EvasObjectPtr (IntPtr pointer)
 		{
 			this.Pointer = pointer;
 		}
 
 		public IntPtr Pointer;
-	}
+	}	
 
 
 	public class EvasObject : Impl.EvasObjectImpl
@@ -68,8 +72,8 @@ namespace Efl.Evas
 
 //		private HandleRef _objRaw;
 //
-//		public virtual EvasObjectPtr Raw {
-//			get { return new EvasObjectPtr (_objRaw.Handle); }
+//		public virtual IntPtr Raw {
+//			get { return new IntPtr (_objRaw.Handle); }
 //			set { _objRaw = new HandleRef (this, value.Pointer); }
 //		}
 		
@@ -83,35 +87,35 @@ namespace Efl.Evas
 		
 		public static void Delete(EvasObject evasObject)
 		{
-			evas_object_del(evasObject.Raw);
-		}
+			evas_object_del(evasObject.Raw.Pointer);
+		}	
 
 		public virtual void Show ()
 		{
-			evas_object_show (Raw);
+			evas_object_show (Raw.Pointer);
 		}
 
 		public virtual void Hide ()
 		{
-			evas_object_hide (Raw);
+			evas_object_hide (Raw.Pointer);
 		}
 		
 		public virtual bool Visible {
-			get { return evas_object_visible_get (Raw); }
+			get { return evas_object_visible_get (Raw.Pointer); }
 			set {
 				if (value)
-					evas_object_show (Raw);
+					evas_object_show (Raw.Pointer);
 				else
-					evas_object_hide (Raw);
+					evas_object_hide (Raw.Pointer);
 			}
 		}
 
-		public void SmartCallbackAdd (string eventName, EventHandler seh, EvasObjectPtr data)
+		public void SmartCallbackAdd (string eventName, EventHandler seh, IntPtr data)
 		{
-			SmartCallbackAdd (this.Raw, eventName, seh, data);
+			SmartCallbackAdd (this.Raw.Pointer, eventName, seh, data);
 		}
 
-		public void SmartCallbackAdd (EvasObjectPtr obj, string eventName, EventHandler seh, EvasObjectPtr data)
+		public void SmartCallbackAdd (IntPtr obj, string eventName, EventHandler seh, IntPtr data)
 		{
 			var handler = GetInternalEventHandler (seh);
 			_internalEventHandlers.Add (new EventHandlers { internalEventHandler = handler, eventHandler = seh });
@@ -122,10 +126,10 @@ namespace Efl.Evas
 
 		public void SmartCallbackRemove (string eventName, EventHandler seh)
 		{
-			SmartCallbackRemove (this.Raw, eventName, seh);
+			SmartCallbackRemove (this.Raw.Pointer, eventName, seh);
 		}
 
-		public void SmartCallbackRemove (EvasObjectPtr obj, string eventName, EventHandler seh)
+		public void SmartCallbackRemove (IntPtr obj, string eventName, EventHandler seh)
 		{
 			var eventHandlers = _internalEventHandlers.Where (eh => eh.eventHandler == seh);
 			
@@ -136,24 +140,24 @@ namespace Efl.Evas
 		
 		public void SizeHintWeight (double x, double y)
 		{
-			evas_object_size_hint_weight_set (this.Raw, x, y);
+			evas_object_size_hint_weight_set (this.Raw.Pointer, x, y);
 		}
 
 		
 		public void SizeHintAlign (double x, double y)
 		{
-			evas_object_size_hint_align_set (this.Raw, x, y);
+			evas_object_size_hint_align_set (this.Raw.Pointer, x, y);
 		}
 		
 		public void Move(int x, int y)
 		{
-			evas_object_move(Raw, x, y);
-		}
+			evas_object_move(Raw.Pointer, x, y);
+		}	
 		
 		public void Resize(int w, int h)
 		{
-			evas_object_resize(Raw, w, h);
-		}
+			evas_object_resize(Raw.Pointer, w, h);
+		}	
 	}
 }
 

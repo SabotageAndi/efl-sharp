@@ -22,16 +22,18 @@
 
 using System;
 using System.Runtime.InteropServices;
+
 namespace Efl.Elementary
 {
 	public class Label : Impl.LabelImpl
 	{
-		public Label()
-		{}
+		public Label ()
+		{
+		}
 		
 		public Label (Evas.EvasObject parent)
 		{
-			Raw = elm_label_add (parent.Raw);
+			Raw.Pointer = elm_label_add (parent.Raw.Pointer);
 		}
 
 		public Label (Evas.EvasObject parent, string text) : this(parent)
@@ -40,7 +42,7 @@ namespace Efl.Elementary
 		}
 
 		public string Text {
-			set { elm_label_label_set (this.Raw, value); }
+			set { elm_label_label_set (this.Raw.Pointer, value); }
 		}
 	}
 }

@@ -28,29 +28,29 @@ namespace Efl.Elementary
 	{
 		public Box (Evas.EvasObject parent)
 		{
-			Raw = elm_box_add (parent.Raw);
+			Raw.Pointer = elm_box_add (parent.Raw.Pointer);
 		}
 		
 		public void PackStart(Evas.EvasObject child)
 		{
-			elm_box_pack_start(this.Raw, child.Raw);
+			elm_box_pack_start(this.Raw.Pointer, child.Raw.Pointer);
 		}
 		
 		public void PackEnd(Evas.EvasObject child)
 		{
-			elm_box_pack_end(this.Raw, child.Raw);
+			elm_box_pack_end(this.Raw.Pointer, child.Raw.Pointer);
 		}
 		
 		public bool IsHorizontal
 		{
-			get{return elm_box_horizontal_get(Raw);}
-			set{elm_box_horizontal_set(Raw, value);}
+			get{return elm_box_horizontal_get(Raw.Pointer);}
+			set{elm_box_horizontal_set(Raw.Pointer, value);}
 		}
 		
 		public bool IsHomogenous
 		{
-			get { return elm_box_homogenous_get(this.Raw);}
-			set { elm_box_homogenous_set(this.Raw, value);}
+			get { return elm_box_homogenous_get(this.Raw.Pointer);}
+			set { elm_box_homogenous_set(this.Raw.Pointer, value);}
 		}
 	}
 }

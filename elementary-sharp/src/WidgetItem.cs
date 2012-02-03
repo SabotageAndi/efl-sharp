@@ -34,9 +34,9 @@ namespace Efl.Elementary
 	public class WidgetItem
 	{
 		public uint Magic;
-		public Evas.EvasObjectPtr Widget;
-		public Evas.EvasObjectPtr View;
-		public Evas.EvasObjectPtr Data;
+		public IntPtr Widget;
+		public IntPtr View;
+		public IntPtr Data;
 		public Evas.EvasSmartCallback DeleteCallback;
 	}
 }
