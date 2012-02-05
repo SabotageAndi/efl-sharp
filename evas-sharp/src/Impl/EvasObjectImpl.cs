@@ -56,6 +56,9 @@ namespace Efl.Evas.Impl
 		[DllImport(Evas.Name)]
 		protected static extern void evas_object_resize (IntPtr obj, int w, int h);
 		
-	}
+		[DllImport(Evas.Name)]
+		//protected static extern void evas_object_geometry_get(IntPtr obj, IntPtr x, IntPtr y, IntPtr w, IntPtr h);
+		protected static extern void evas_object_geometry_get(IntPtr obj, out int x, out int y, out int w, out int h);
+	}	
 }
 

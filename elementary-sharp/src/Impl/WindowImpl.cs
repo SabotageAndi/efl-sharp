@@ -39,6 +39,9 @@ namespace Efl.Elementary.Impl
 		protected static extern void elm_win_title_set (IntPtr obj, string title);
 		
 		[DllImport(Library.Name)]
+		protected static extern string elm_win_title_get (IntPtr obj);
+		
+		[DllImport(Library.Name)]
 		protected static extern void elm_win_resize_object_add(IntPtr obj, IntPtr subobj);
 		
 	}

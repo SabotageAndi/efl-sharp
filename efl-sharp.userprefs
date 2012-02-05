@@ -1,11 +1,10 @@
 ﻿<Properties GitUserInfo="UsingMD">
   <AuthorInfo Name="Andreas Willich" Email="sabotageandi@gmail.com" Copyright="Andreas Willich" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="efl-sharp-test/App.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="elementary-sharp/src/Window.cs">
     <Files>
-      <File FileName="efl-sharp-test/App.cs" Line="47" Column="16" />
-      <File FileName="ecoreevas-sharp/src/EcoreEvas.cs" Line="44" Column="24" />
-      <File FileName="ecoreevas-sharp/src/Impl/EcoreEvasImpl.cs" Line="1" Column="1" />
+      <File FileName="elementary-sharp/src/Window.cs" Line="55" Column="32" />
+      <File FileName="elementary-sharp/src/Impl/WindowImpl.cs" Line="42" Column="63" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -15,11 +14,21 @@
               <Node name="Impl" expanded="True" />
             </Node>
           </Node>
+          <Node name="edje-sharp" expanded="True">
+            <Node name="src" expanded="True" />
+          </Node>
           <Node name="efl-sharp-common" expanded="True">
             <Node name="src" expanded="True" />
           </Node>
-          <Node name="efl-sharp-test" expanded="True">
-            <Node name="App.cs" selected="True" />
+          <Node name="efl-sharp-test" expanded="True" />
+          <Node name="elementary-sharp" expanded="True">
+            <Node name="src" expanded="True">
+              <Node name="Impl" expanded="True" />
+              <Node name="Window.cs" selected="True" />
+            </Node>
+          </Node>
+          <Node name="evas-sharp" expanded="True">
+            <Node name="src" expanded="True" />
           </Node>
         </State>
       </Pad>

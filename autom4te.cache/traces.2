@@ -596,6 +596,50 @@ AC_MSG_RESULT([$am_cv_prog_tar_$1])])
 AC_SUBST([am__tar])
 AC_SUBST([am__untar])
 ])
+m4trace:expansions.m4:1: -1- AC_DEFUN([SHAMROCK_EXPAND_LIBDIR], [	
+	expanded_libdir=`(
+		case $prefix in 
+			NONE) prefix=$ac_default_prefix ;; 
+			*) ;; 
+		esac
+		case $exec_prefix in 
+			NONE) exec_prefix=$prefix ;; 
+			*) ;; 
+		esac
+		eval echo $libdir
+	)`
+	AC_SUBST(expanded_libdir)
+])
+m4trace:expansions.m4:17: -1- AC_DEFUN([SHAMROCK_EXPAND_BINDIR], [
+	expanded_bindir=`(
+		case $prefix in 
+			NONE) prefix=$ac_default_prefix ;; 
+			*) ;; 
+		esac
+		case $exec_prefix in 
+			NONE) exec_prefix=$prefix ;; 
+			*) ;; 
+		esac
+		eval echo $bindir
+	)`
+	AC_SUBST(expanded_bindir)
+])
+m4trace:expansions.m4:33: -1- AC_DEFUN([SHAMROCK_EXPAND_DATADIR], [
+	case $prefix in
+		NONE) prefix=$ac_default_prefix ;;
+		*) ;;
+	esac
+
+	case $exec_prefix in
+		NONE) exec_prefix=$prefix ;;
+		*) ;;
+	esac
+
+	expanded_datadir=`(eval echo $datadir)`
+	expanded_datadir=`(eval echo $expanded_datadir)`
+
+	AC_SUBST(expanded_datadir)
+])
 m4trace:configure.ac:4: -1- m4_pattern_forbid([^_?A[CHUM]_])
 m4trace:configure.ac:4: -1- m4_pattern_forbid([_AC_])
 m4trace:configure.ac:4: -1- m4_pattern_forbid([^LIBOBJS$], [do not use LIBOBJS directly, use AC_LIBOBJ (see section `AC_LIBOBJ vs LIBOBJS'])
@@ -651,7 +695,7 @@ m4trace:configure.ac:5: -1- AM_INIT_AUTOMAKE([foreign])
 m4trace:configure.ac:5: -1- m4_pattern_allow([^AM_[A-Z]+FLAGS$])
 m4trace:configure.ac:5: -1- AM_SET_CURRENT_AUTOMAKE_VERSION
 m4trace:configure.ac:5: -1- AM_AUTOMAKE_VERSION([1.11.1])
-m4trace:configure.ac:5: -1- _AM_AUTOCONF_VERSION([2.68])
+m4trace:configure.ac:5: -1- _AM_AUTOCONF_VERSION([2.65])
 m4trace:configure.ac:5: -1- m4_pattern_allow([^INSTALL_PROGRAM$])
 m4trace:configure.ac:5: -1- m4_pattern_allow([^INSTALL_SCRIPT$])
 m4trace:configure.ac:5: -1- m4_pattern_allow([^INSTALL_DATA$])
@@ -727,6 +771,12 @@ m4trace:configure.ac:6: -1- _AM_SUBST_NOTMAKE([MAINTAINER_MODE_TRUE])
 m4trace:configure.ac:6: -1- _AM_SUBST_NOTMAKE([MAINTAINER_MODE_FALSE])
 m4trace:configure.ac:6: -1- m4_pattern_allow([^MAINT$])
 m4trace:configure.ac:9: -1- m4_pattern_allow([^PKG_CONFIG$])
+m4trace:configure.ac:14: -1- SHAMROCK_EXPAND_LIBDIR
+m4trace:configure.ac:14: -1- m4_pattern_allow([^expanded_libdir$])
+m4trace:configure.ac:15: -1- SHAMROCK_EXPAND_BINDIR
+m4trace:configure.ac:15: -1- m4_pattern_allow([^expanded_bindir$])
+m4trace:configure.ac:16: -1- SHAMROCK_EXPAND_DATADIR
+m4trace:configure.ac:16: -1- m4_pattern_allow([^expanded_datadir$])
 m4trace:configure.ac:20: -1- m4_pattern_allow([^GMCS$])
 m4trace:configure.ac:27: -2- _m4_warn([obsolete], [The macro `AC_HELP_STRING' is obsolete.
 You should run autoupdate.], [../../lib/autoconf/general.m4:209: AC_HELP_STRING is expanded from...
@@ -744,10 +794,10 @@ m4trace:configure.ac:38: -1- m4_pattern_allow([^ENABLE_RELEASE_TRUE$])
 m4trace:configure.ac:38: -1- m4_pattern_allow([^ENABLE_RELEASE_FALSE$])
 m4trace:configure.ac:38: -1- _AM_SUBST_NOTMAKE([ENABLE_RELEASE_TRUE])
 m4trace:configure.ac:38: -1- _AM_SUBST_NOTMAKE([ENABLE_RELEASE_FALSE])
-m4trace:configure.ac:43: -1- AM_CONDITIONAL([ENABLE_RELEASE], [true])
-m4trace:configure.ac:43: -1- m4_pattern_allow([^ENABLE_RELEASE_TRUE$])
-m4trace:configure.ac:43: -1- m4_pattern_allow([^ENABLE_RELEASE_FALSE$])
-m4trace:configure.ac:43: -1- _AM_SUBST_NOTMAKE([ENABLE_RELEASE_TRUE])
-m4trace:configure.ac:43: -1- _AM_SUBST_NOTMAKE([ENABLE_RELEASE_FALSE])
+m4trace:configure.ac:43: -1- AM_CONDITIONAL([ENABLE_DEBUG], [true])
+m4trace:configure.ac:43: -1- m4_pattern_allow([^ENABLE_DEBUG_TRUE$])
+m4trace:configure.ac:43: -1- m4_pattern_allow([^ENABLE_DEBUG_FALSE$])
+m4trace:configure.ac:43: -1- _AM_SUBST_NOTMAKE([ENABLE_DEBUG_TRUE])
+m4trace:configure.ac:43: -1- _AM_SUBST_NOTMAKE([ENABLE_DEBUG_FALSE])
 m4trace:configure.ac:72: -1- m4_pattern_allow([^LIB@&t@OBJS$])
 m4trace:configure.ac:72: -1- m4_pattern_allow([^LTLIBOBJS$])

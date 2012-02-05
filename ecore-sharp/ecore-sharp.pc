@@ -3,4 +3,4 @@ Description: ecore-sharp
 Version: 0.1
 
 Requires: 
-Libs: -r:@expanded_libdir@/efl-sharp/libecore-sharp.dll
+Libs: -r:/usr/lib/efl-sharp/libecore-sharp.dll
