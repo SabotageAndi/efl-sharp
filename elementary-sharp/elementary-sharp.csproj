@@ -71,6 +71,10 @@
     <Compile Include="src\Impl\ToolbarItemImpl.cs" />
     <Compile Include="src\ToolbarItem.cs" />
     <Compile Include="src\Toolbar.cs" />
+    <Compile Include="src\Impl\MenuImpl.cs" />
+    <Compile Include="src\Menu.cs" />
+    <Compile Include="src\ObjectItem.cs" />
+    <Compile Include="src\MenuItem.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

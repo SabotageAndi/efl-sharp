@@ -25,16 +25,7 @@ using System.Collections;
 using System.Runtime.InteropServices;
 namespace Efl.Eina
 {
-	[StructLayout(LayoutKind.Sequential)]
-	public struct EinaListPtr
-	{
-		public EinaListPtr (IntPtr pointer)
-		{
-			this.Pointer = pointer;
-		}
-
-		public IntPtr Pointer;
-	}
+	
 	
 	public class EinaList : Impl.EinaListImpl, IList, IEnumerable, ICollection
 	{
@@ -42,12 +33,12 @@ namespace Efl.Eina
 		{
 		}
 
-		public EinaList(EinaListPtr lastItem)
+		public EinaList(IntPtr lastItem)
 		{
 			_lastItem = lastItem;
 		}
 
-		private EinaListPtr _lastItem;
+		private IntPtr _lastItem;
 
 		public int Count
 		{
@@ -57,7 +48,7 @@ namespace Efl.Eina
 		#region IList implementation
 		public int Add(object value)
 		{
-			_lastItem = eina_list_append(_lastItem, new EinaListPtr(IntPtr.Zero));
+			_lastItem = eina_list_append(_lastItem, IntPtr.Zero);
 			return 1;
 		}
 

@@ -96,6 +96,7 @@ FILES =  \
 	src/Impl/ImageImpl.cs \
 	src/Impl/LabelImpl.cs \
 	src/Impl/ListImpl.cs \
+	src/Impl/MenuImpl.cs \
 	src/Impl/ScrolledEntryImpl.cs \
 	src/Impl/ToolbarImpl.cs \
 	src/Impl/ToolbarItemImpl.cs \
@@ -104,6 +105,9 @@ FILES =  \
 	src/Library.cs \
 	src/List.cs \
 	src/ListItem.cs \
+	src/Menu.cs \
+	src/MenuItem.cs \
+	src/ObjectItem.cs \
 	src/ScrolledEntry.cs \
 	src/Toolbar.cs \
 	src/ToolbarItem.cs \

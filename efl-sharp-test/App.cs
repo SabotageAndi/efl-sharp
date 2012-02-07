@@ -75,6 +75,8 @@ namespace eflsharptest
 			};
 			
 			
+			
+			
 			window.Resize (800, 600);
 			window.Move (100, 100);
 			

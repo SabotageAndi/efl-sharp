@@ -80,7 +80,7 @@ namespace Efl.Elementary.Impl
 		protected static extern bool elm_list_always_select_mode_get(IntPtr obj);
 	
 		[DllImport(Library.Name)]
-		protected static extern Efl.Eina.EinaListPtr  elm_list_items_get(IntPtr obj);
+		protected static extern IntPtr  elm_list_items_get(IntPtr obj);
 		
 		[DllImport(Library.Name)]
 		protected static extern ListItemPtr elm_list_selected_item_get(IntPtr obj);

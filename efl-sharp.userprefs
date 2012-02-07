@@ -1,10 +1,13 @@
 ﻿<Properties GitUserInfo="UsingMD">
   <AuthorInfo Name="Andreas Willich" Email="sabotageandi@gmail.com" Copyright="Andreas Willich" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="elementary-sharp/src/Window.cs">
+  <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="elementary-sharp/src/Window.cs" Line="55" Column="32" />
-      <File FileName="elementary-sharp/src/Impl/WindowImpl.cs" Line="42" Column="63" />
+      <File FileName="elementary-sharp/src/Menu.cs" Line="29" Column="32" />
+      <File FileName="elementary-sharp/src/Impl/MenuImpl.cs" Line="28" Column="35" />
+      <File FileName="elementary-sharp/src/MenuItem.cs" Line="100" Column="69" />
+      <File FileName="evas-sharp/src/EvasObject.cs" Line="55" Column="33" />
+      <File FileName="eina-sharp/src/EinaList.cs" Line="36" Column="13" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -21,14 +24,20 @@
             <Node name="src" expanded="True" />
           </Node>
           <Node name="efl-sharp-test" expanded="True" />
+          <Node name="eina-sharp" expanded="True">
+            <Node name="src" expanded="True">
+              <Node name="EinaList.cs" selected="True" />
+            </Node>
+          </Node>
           <Node name="elementary-sharp" expanded="True">
             <Node name="src" expanded="True">
               <Node name="Impl" expanded="True" />
-              <Node name="Window.cs" selected="True" />
             </Node>
           </Node>
           <Node name="evas-sharp" expanded="True">
-            <Node name="src" expanded="True" />
+            <Node name="src" expanded="True">
+              <Node name="Impl" expanded="True" />
+            </Node>
           </Node>
         </State>
       </Pad>

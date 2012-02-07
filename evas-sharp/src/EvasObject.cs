@@ -50,6 +50,11 @@ namespace Efl.Evas
 			Raw = new EvasObjectPtr(IntPtr.Zero);
 		}
 		
+		public EvasObject(IntPtr ptr)
+		{
+			Raw = new EvasObjectPtr(ptr);
+		}	
+		
 		public EvasObject(EvasObjectPtr ptr)
 		{
 			Raw = ptr;
